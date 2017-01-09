@@ -66,3 +66,5 @@
  redis在存储数据时，都把数据转化为byte[]数组的形式。在存取数据时，需要将数据格式进行转化，那么就需要用到序列化和反序列化，这就是需要配置Serializer的原因。
  
   在项目中，是在配置文件中直接配置了相应的Serializer，key用的是StringRedisSerializer，value用的是JdkSerializationRedisSerializer，因此在项目中，key为userId是String类型，value为user对象是Java类，即POJO，所以使用JdkSerializationRedisSerializer。
+
+部分内容来源于网络： Thanks-http://www.cnblogs.com/edwinchen/p/3816938.html
